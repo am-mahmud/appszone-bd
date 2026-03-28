@@ -63,7 +63,7 @@ export const plans = [
       "24/7 Priority Support",
       "Hardware Management",
     ],
-    cta: "Contact Us",
+    cta: "Get Started",
     href: "/contact",
   },
   {
