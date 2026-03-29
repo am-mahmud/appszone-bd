@@ -82,3 +82,11 @@ export const timeline = [
   },
 ];
 
+export const points = [
+  "Custom Web & Mobile App Development",
+  "AI-Driven Business Automation",
+  "MERN Stack Development",
+  "Scalable Learning Management (LMS)",
+  "Smart Real Estate Technology Solutions",
+  "End-to-end IT Infrastructure Support",
+];
