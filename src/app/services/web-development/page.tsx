@@ -163,9 +163,9 @@ export default function WebDevelopmentPage() {
                         strokeWidth={1.5}
                       />
                     </div>
-                    <span className="text-white/10 text-4xl font-bold">
+                    {/* <span className="text-white/10 text-4xl font-bold">
                       0{i + 1}
-                    </span>
+                    </span> */}
                   </div>
                   <h3 className="text-white font-semibold text-base mb-3">
                     {p.title}
