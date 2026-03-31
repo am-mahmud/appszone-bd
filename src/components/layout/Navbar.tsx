@@ -4,6 +4,7 @@ import { MainNavbar } from "@/content/navbar";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,11 +15,17 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        <Link href="/" className="text-lg font-bold text-white tracking-tight">
-          AppsZoneBD
+        {/* ── Logo ── */}
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="AppsZoneBD Logo"
+            width={120}
+            height={40}
+          />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* ── Desktop Nav ── */}
         <nav className="hidden md:flex items-center gap-8">
           {MainNavbar.map((item) => (
             <div
@@ -36,8 +43,8 @@ export default function Navbar() {
 
               {item.submenu && (
                 <div
-                  className={`absolute gap-1 top-full left-0 bg-slate-800 border border-slate-700 shadow-xl py-2 px-1 rounded-lg min-w-max ${
-                    activeMenu === item.name ? "flex flex-col" : "hidden"
+                  className={`absolute top-full left-0 w-56 bg-slate-800 border border-slate-700 shadow-xl py-2 px-1 rounded-lg ${
+                    activeMenu === item.name ? "flex flex-col gap-1" : "hidden"
                   }`}
                 >
                   {item.submenu.map((sub) => (
@@ -55,6 +62,7 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* ── CTA ── */}
         <Link
           href="/contact"
           className="hidden md:block text-sm bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg transition-colors duration-200"
@@ -62,6 +70,7 @@ export default function Navbar() {
           Make an Appointment
         </Link>
 
+        {/* ── Mobile Toggle ── */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-slate-300 hover:text-white transition-colors duration-200"
@@ -70,7 +79,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* ── Mobile Nav ── */}
       {open && (
         <div className="md:hidden border-t border-slate-700/50 px-6 py-4 flex flex-col gap-1 bg-slate-900">
           {MainNavbar.map((item) => (

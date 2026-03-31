@@ -1,75 +1,80 @@
 import {
+  Layout,
   Smartphone,
-  Code2,
   RefreshCw,
   Plug,
   BarChart2,
-  Layout,
+  Code2,
   ArrowRight,
-  CheckCircle2,
+  ArrowUpRight,
+  MonitorSmartphone,
+  Layers,
+  Cpu,
   Zap,
-  Shield,
+  Users,
+  GitMerge,
   Globe,
+  Lock,
+  BarChart,
+  Workflow,
 } from "lucide-react";
 
 const offerings = [
-  {
-    icon: Smartphone,
-    label: "Mobile & Web Applications",
-    desc: "Cross-platform apps built for speed, scale, and seamless user experience.",
-  },
-  {
-    icon: Layout,
-    label: "Personalized Software Creation",
-    desc: "Custom-built systems designed around your exact business workflow.",
-  },
-  {
-    icon: RefreshCw,
-    label: "Updating Legacy Systems",
-    desc: "Modernize outdated platforms without disrupting your operations.",
-  },
-  {
-    icon: Plug,
-    label: "APIs & System Integrations",
-    desc: "Connect your tools, platforms, and services into one unified system.",
-  },
-  {
-    icon: BarChart2,
-    label: "Data Analytics & BI",
-    desc: "Turn raw data into actionable insights with powerful dashboards.",
-  },
-  {
-    icon: Code2,
-    label: ".NET Application Development",
-    desc: "Enterprise-grade .NET applications that are secure and maintainable.",
-  },
+  { icon: Layout, label: "Personalized Software Creation" },
+  { icon: Smartphone, label: "Mobile and Web Applications" },
+  { icon: RefreshCw, label: "Updating Legacy Systems" },
+  { icon: Plug, label: "APIs and System Integrations" },
+  { icon: BarChart2, label: "Data Analytics and Business Intelligence" },
+  { icon: Code2, label: ".NET Application Development" },
 ];
 
-const pillars = [
+const features = [
   {
-    icon: Zap,
-    title: "Performance First",
-    desc: "Every product we build is optimized for speed — fast load times, efficient queries, and smooth interactions across all devices.",
+    title: "Mobile & Web Apps",
+    titleDesc: "We craft digital experiences that work beautifully across every device — fast, intuitive, and built to retain users from the first interaction.",
+    desc: "Let our UI/UX professionals build mobile and web apps that streamline operations for your team and provide an unparalleled experience for your clients.",
+    points: [
+      { icon: MonitorSmartphone, label: "Cross-Platform Apps", desc: "iOS, Android, and web from a single codebase." },
+      { icon: Users, label: "User-First UI/UX", desc: "Interfaces designed for real users, not developers." },
+      { icon: Zap, label: "Performance Optimized", desc: "Fast load times and smooth interactions built in." },
+      { icon: Layers, label: "Modern Stack", desc: "Built with React Native, Flutter, and Next.js." },
+    ],
+    dark: true,
   },
   {
-    icon: Shield,
-    title: "Security by Design",
-    desc: "Security is not an afterthought. We integrate best practices from the ground up — authentication, encryption, and compliance built in.",
+    title: "Custom Software Development",
+    titleDesc: "Every business is unique. We build software that fits your operations precisely — not the other way around.",
+    desc: "We build software tailored exactly to your operational requirements. Every solution is designed around your workflow, your team, and your business goals.",
+    extra: "We design and build software that fits your operations precisely — not generic tools that force you to change how you work. Every feature and every integration is planned around your team's real needs.",
+    points: [
+      { icon: Cpu, label: "Technical Scoping", desc: "Deep requirements analysis before writing a line of code." },
+      { icon: Workflow, label: "Agile Process", desc: "Regular updates and demos throughout development." },
+      { icon: Code2, label: "Full Documentation", desc: "Complete handover with docs and team training." },
+      { icon: RefreshCw, label: "Post-Launch Support", desc: "Ongoing support and iterative improvements." },
+    ],
+    dark: false,
   },
   {
-    icon: Globe,
-    title: "Built to Scale",
-    desc: "Whether you have 10 users or 10 million, our architecture grows with you. Cloud-native, containerized, and globally deployable.",
+    title: "APIs & Integrations",
+    titleDesc: "Your tools should work together seamlessly. We connect everything in your tech stack into one unified, reliable system.",
+    desc: "We connect your systems, tools, and platforms through robust API integrations — whether it is a third-party service, a payment gateway, or an internal tool.",
+    points: [
+      { icon: GitMerge, label: "REST & GraphQL", desc: "Modern API development for any use case." },
+      { icon: Plug, label: "Third-Party Services", desc: "Connect any external platform or SaaS tool." },
+      { icon: Globe, label: "Payment Gateways", desc: "Secure integration with Stripe, PayPal, and more." },
+      { icon: Lock, label: "Secure by Default", desc: "Auth, encryption, and rate limiting built in." },
+    ],
+    dark: true,
   },
 ];
 
 export default function WebDevelopmentPage() {
   return (
     <main className="bg-[#0a0a1a] min-h-screen">
+
       {/* ── Hero ─────────────────────────────────────── */}
       <section className="pt-24 pb-16 px-6 border-b border-white/5">
         <div className="max-w-6xl mx-auto">
-          {/* Large headline */}
           <div className="max-w-4xl mb-12">
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-none tracking-tight mb-6">
               Web
@@ -78,14 +83,13 @@ export default function WebDevelopmentPage() {
             </h1>
             <p className="text-white/50 text-lg leading-relaxed max-w-2xl mb-4">
               AI-driven, secure, and scalable web solutions. From custom apps to
-              legacy modernization we build what your business needs to grow.
+              legacy modernization — we build what your business needs to grow.
             </p>
-            <p className="text-white/50 text-lg leading-relaxed max-w-2xl mb-4">
+            <p className="text-white/50 text-lg leading-relaxed max-w-2xl mb-8">
               Obtain tailored software solutions that align with both your
               business needs and budget. Every project starts with understanding
               your goals.
             </p>
-
             <a
               href="/contact"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
@@ -96,83 +100,32 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── What We Offer ────────────────────────────── */}
-      <section className="py-20 px-6 ">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col  gap-4 mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-white">
-                What Appszone Offer for Web Development
-              </h2>
-            </div>
-            <p className="text-white/30 text-base leading-relaxed">
-              A full spectrum of web development services from idea to
-              deployment and beyond.
-            </p>
+      {/* ── Offerings ────────────────────────────────── */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Obtain the tailored software solutions that align with both your
+              business needs and budget.
+            </h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/5 border border-white/5 rounded-2xl overflow-hidden">
+          <div className="divide-y divide-gray-100">
             {offerings.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.label}
-                  className="p-8 hover:bg-white/[0.02] transition-colors"
+                  className="flex items-center justify-between py-4 group cursor-default"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
-                    <Icon
-                      className="w-4 h-4 text-purple-400"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                  <h3 className="text-white font-semibold text-sm mb-2">
-                    {item.label}
-                  </h3>
-                  <p className="text-white/30 text-xs leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Three Pillars ─────────────────────────────── */}
-      <section className="py-20 px-6 ">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <p className="text-purple-400 text-xs uppercase tracking-widest mb-3">
-              Our Approach
-            </p>
-            <h2 className="text-3xl font-bold text-white">How We Build</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {pillars.map((p, i) => {
-              const Icon = p.icon;
-              return (
-                <div
-                  key={p.title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-8"
-                >
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                      <Icon
-                        className="w-4 h-4 text-purple-400"
-                        strokeWidth={1.5}
-                      />
+                  <div className="flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-lg bg-purple-50 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-3.5 h-3.5 text-purple-500" strokeWidth={1.5} />
                     </div>
-                    {/* <span className="text-white/10 text-4xl font-bold">
-                      0{i + 1}
-                    </span> */}
+                    <span className="text-gray-700 text-sm font-medium">
+                      {item.label}
+                    </span>
                   </div>
-                  <h3 className="text-white font-semibold text-base mb-3">
-                    {p.title}
-                  </h3>
-                  <p className="text-white/30 text-sm leading-relaxed">
-                    {p.desc}
-                  </p>
+                  {/* <ArrowUpRight className="w-4 h-4 text-gray-300 flex-shrink-0 ml-4" /> */}
                 </div>
               );
             })}
@@ -180,53 +133,87 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── Customized Software ───────────────────────── */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-purple-400 text-xs uppercase tracking-widest mb-3">
-              Philosophy
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-              Software Customized to Your Operational Requirements
-            </h2>
-            <p className="text-white/40 text-sm leading-relaxed">
-              We design and build software that fits your operations precisely —
-              not generic tools that force you to change how you work. Every
-              feature, every workflow, and every integration is planned around
-              your teams real needs. The result is a system your staff actually
-              uses, your clients actually enjoy, and your business benefits from
-              — from day one.
-            </p>
-          </div>
+      {/* ── Feature Sections ─────────────────────────── */}
+      {features.map((feature) => (
+        <section
+          key={feature.title}
+          className={`py-24 px-6 ${feature.dark ? "bg-[#0f0f1f]" : "bg-white"}`}
+        >
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-            <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
-              <Code2 className="w-5 h-5 text-purple-400" strokeWidth={1.5} />
+            {/* Left */}
+            <div>
+              <h2
+                className={`text-4xl md:text-5xl font-bold leading-tight mb-4 ${
+                  feature.dark ? "text-white" : "text-gray-900"
+                }`}
+              >
+                {feature.title}
+              </h2>
+              <p
+                className={`text-sm leading-relaxed mb-4 ${
+                  feature.dark ? "text-white/30" : "text-gray-400"
+                }`}
+              >
+                {feature.titleDesc}
+              </p>
+              <p
+                className={`text-sm leading-relaxed ${
+                  feature.dark ? "text-white/40" : "text-gray-500"
+                }`}
+              >
+                {feature.desc}
+              </p>
+              {feature.extra && (
+                <p className="text-sm leading-relaxed text-gray-500 mt-3">
+                  {feature.extra}
+                </p>
+              )}
             </div>
-            <div className="space-y-3">
-              {[
-                "Built around your workflow, not the other way around",
-                "Every feature justified by a real business need",
-                "Handover with full documentation and training",
-                "Post-launch support and iterative improvements",
-                "Transparent process with regular progress updates",
-              ].map((f) => (
-                <div
-                  key={f}
-                  className="flex items-start gap-3 border-b border-white/5 pb-3"
-                >
-                  <CheckCircle2
-                    className="w-4 h-4 text-purple-400 flex-shrink-0.5"
-                    strokeWidth={1.5}
-                  />
-                  <span className="text-white/50 text-sm">{f}</span>
-                </div>
-              ))}
+
+            {/* Right — feature cards */}
+            <div className="grid grid-cols-2 gap-3">
+              {feature.points.map((point) => {
+                const Icon = point.icon;
+                return (
+                  <div
+                    key={point.label}
+                    className={`rounded-xl p-5 ${
+                      feature.dark
+                        ? "bg-white/5 border border-white/10"
+                        : "bg-gray-50 border border-gray-100"
+                    }`}
+                  >
+                    <div
+                      className={`w-8 h-8 rounded-lg flex items-center justify-center mb-4 ${
+                        feature.dark
+                          ? "bg-purple-500/10 border border-purple-500/20"
+                          : "bg-purple-50 border border-purple-100"
+                      }`}
+                    >
+                      <Icon className="w-4 h-4 text-purple-400" strokeWidth={1.5} />
+                    </div>
+                    <p
+                      className={`text-sm font-semibold mb-1.5 ${
+                        feature.dark ? "text-white/80" : "text-gray-800"
+                      }`}
+                    >
+                      {point.label}
+                    </p>
+                    <p
+                      className={`text-xs leading-relaxed ${
+                        feature.dark ? "text-white/30" : "text-gray-400"
+                      }`}
+                    >
+                      {point.desc}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* ── CTA ──────────────────────────────────────── */}
       <section className="py-24 px-6">
@@ -237,7 +224,7 @@ export default function WebDevelopmentPage() {
                 Determine the software solutions necessary for your business to
                 flourish.
               </h2>
-              <p className="text-white/30 text-sm leading-relaxed mb-6">
+              <p className="text-white/30 text-sm leading-relaxed">
                 Talk to our team and we will help you identify the right tech
                 stack, approach, and timeline for your project.
               </p>
@@ -253,6 +240,7 @@ export default function WebDevelopmentPage() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }
